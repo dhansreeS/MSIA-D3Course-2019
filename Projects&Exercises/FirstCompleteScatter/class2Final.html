@@ -97,7 +97,7 @@ function ready(error, data) {
 
     d3.select('#titleText')
       .text('UFO Sightings in ' + datasetGroup)
-    
+
   }
 
   window.data = data;
@@ -119,7 +119,7 @@ function ready(error, data) {
     d.year = d.date.split('/')[1];
     d.date = parseTime(d.date);
     // d.year = d.date.getYear() + 1900
-    
+
   });
 
   var yearList = d3.set(data.map(function(d) { return d.year })).values();
@@ -140,7 +140,7 @@ function ready(error, data) {
   var margin = {top: 20, right: 10, bottom: 20, left: 30};
 
   var width = 500 - margin.left - margin.right
-      
+
   height = 500 - margin.top - margin.bottom;
 
   var svg = d3.select("body").append("svg")

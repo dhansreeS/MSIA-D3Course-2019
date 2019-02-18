@@ -52,7 +52,17 @@ var data = [{
 ];
 
 // New code here:
-  
+
+var rects = svg.selectAll('rect')
+
+rects.data(data)
+    .enter()
+    .append('rect')
+    .attr('x',0)
+    .attr('height',20)
+    .attr('y',function(d) {return d.y;})
+    .attr('width',function(d) {return d.width;})
+
 </script>
 
 </html>
